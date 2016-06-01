@@ -130,7 +130,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
                 self.printVisibleCells(context: "INSIDE PERFORM BATCH UPDATES")
                 print("DELETIONS:", changes.deletedIndexPaths)
-                print("INSESRTIONS:", changes.insertedIndexPaths)
+                print("INSERTIONS:", changes.insertedIndexPaths)
                 self.collectionView.deleteItemsAtIndexPaths(Array(changes.deletedIndexPaths))
                 self.collectionView.insertItemsAtIndexPaths(Array(changes.insertedIndexPaths))
                 for move in changes.movedIndexPaths {
