@@ -101,3 +101,8 @@ AFTER PERFORM BATCH UPDATES
 Cell at position 30 is 0x00007f94e843d1f0. There's a move 30 -> 57. After the update, 0x00007f94e843d1f0 is still reported on position 30 
 
 
+## reloadData before performBatchUpdates completes
+
+It can lead to unexpected cells on the collection view: [video](https://github.com/diegosanchezr/UICollectionViewStressing/blob/master/GhostCells/screencast.mov) and [project](https://github.com/diegosanchezr/UICollectionViewStressing/tree/master/GhostCells)
+
+Documentation somehow warns about this: "You should not call this method in the middle of animation blocks where items are being inserted or deleted"
